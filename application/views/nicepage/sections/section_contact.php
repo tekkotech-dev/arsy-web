@@ -39,7 +39,7 @@ $this->session->set_userdata('captcha_contact', $security_code['word']);
         <div class="card-body">
             <div class="row justify-content-center"> 
                 <div class="col-lg-12">
-                    <div class="body-container p-4 shadow">
+                    <div class="body-container p-4 shadow" style="border-radius: 15px;">
                         <?php  
                             $alert = $this->session->flashdata('contact_message');   
                             if( !empty($alert) && isset($alert['success'])) {?>

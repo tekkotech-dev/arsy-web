@@ -44,11 +44,12 @@ if(!empty($get_halaman_id)) {
                 <?php if( !empty($get_halaman)) {?> 
                     <?php foreach($get_halaman as $hal) {?>
                     <div class="col-lg-12">
-                        <div class="body-container shadow">
+                        <div class="body-container shadow" style="border-radius: 15px;">
                             <div class="row">
                                 <div class="col-lg-6 valign">
-                                    <img src="<?php echo base_url();?>asset/foto_statis/<?php echo $hal['gambar'];?>" alt="<?php echo $hal['judul'];?>">
+                                    <img style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;" src="<?php echo base_url();?>asset/foto_statis/<?php echo $hal['gambar'];?>" alt="<?php echo $hal['judul'];?>">
                                 </div>
+                                <!--  -->
                                 <div class="col-lg-6 valign">
                                     <a href="<?php echo base_url('halaman/detail/'.$hal['judul_seo']);?>"> 
                                         <h2 class="body-title  pr-4"> 
