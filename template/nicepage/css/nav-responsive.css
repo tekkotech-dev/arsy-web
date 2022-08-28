@@ -80,27 +80,11 @@ body.responsive-menu-hide > .responsive-menu {
 .responsive-menu .menu-content ul.sidemenu ul.sub-menu li a,
 .responsive-menu .menu-content ul.sidemenu li a {
     color: #f7f7f7;
-    display: block;
+    display: inline-block;
     padding: 10px;   
 }
 
-.responsive-menu .menu-content ul.sidemenu li.menu-item-has-children ul.sub-menu-mobile-194 {
-    display: none;
-}
-
-.responsive-menu .menu-content ul.sidemenu li.menu-item-has-children ul.sub-menu-mobile-189 {
-    display: none;
-}
-
-.responsive-menu .menu-content ul.sidemenu li.menu-item-has-children ul.sub-menu-mobile-201 {
-    display: none;
-}
-
-.responsive-menu .menu-content ul.sidemenu li.menu-item-has-children ul.sub-menu-mobile-202 {
-    display: none;
-}
-
-.responsive-menu .menu-content ul.sidemenu li.menu-item-has-children ul.sub-menu-mobile-203 {
+.responsive-menu .menu-content ul.sidemenu li.menu-item-has-children ul.sub-menu {
     display: none;
 }
 
@@ -116,6 +100,10 @@ body.responsive-menu-hide > .responsive-menu {
     display: none!important;
 }
 
+.show-element-inline {
+    display: inline-block!important;
+}
+
 /* responsive devices start */
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
@@ -124,6 +112,10 @@ body.responsive-menu-hide > .responsive-menu {
         background-size:cover!important;
         background-repeat:no-repeat!important;
         height:100vh!important;
+    }
+    .border-radius-img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
     }
   }
    
@@ -136,6 +128,10 @@ body.responsive-menu-hide > .responsive-menu {
         background-repeat:no-repeat!important;
         height:50vh;
     }
+    .border-radius-img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
   }
    
   /* For iPhone 4 Portrait or Landscape View */
@@ -146,6 +142,13 @@ body.responsive-menu-hide > .responsive-menu {
         background-repeat:no-repeat!important;
         height:50vh;
 
+    }
+    .border-radius-img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .section #carouselTestimonial ol.carousel-indicators li {
+        height: 6px;
     }
   }
    

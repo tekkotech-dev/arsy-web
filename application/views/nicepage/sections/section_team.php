@@ -56,8 +56,8 @@ if(!empty($get_personal_id)) {
         </div>
         <?php } ?> 
         <div class="card-body">
-            <div class="row justify-content-center">
-                <?php if( !empty($get_personal)) {?>
+            <?php if( !empty($get_personal)) {?>
+                <div class="row justify-content-center">
                     <?php
                         switch ((int) $section_team['layout']) { 
                             case 2:
@@ -74,44 +74,68 @@ if(!empty($get_personal_id)) {
                                 break;
                         }
                     ?>
-                    <?php foreach($get_personal as $person) {?>
-                    <div class="mb-4 col-md-6 col-lg-<?php echo $layout;?>">
-                        <div class="body-container animate shadow h-100"> 
-                            <img src="<?php echo base_url();?>asset/img_nicepage/team/<?php echo $person['photo'];?>" alt="<?php echo $person['nama'];?>">                                            
-                            <h4 class="body-title center">
-                                <?php echo $person['nama'];?>
-                            </h4>
-                            <div class="body-content center">
-                                <div class="team-title">
-                                    <?php echo $person['jabatan'];?>
-                                </div>
-                                <div class="team-socmed">
-                                    <a target="_blank" href="<?php echo $person['socmed_fb'];?>">
-                                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                                    </a>
-                                    <a target="_blank" href="<?php echo $person['socmed_twitter'];?>">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                                    </a>
-                                    
-                                    <a target="_blank" href="<?php echo $person['socmed_ig'];?>">
-                                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                    
-                                    <a target="_blank" href="<?php echo $person['socmed_linkedin'];?>">
-                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                             </div>                             
+                    <div class="mb-4 mt-4 col-md-12">
+                        <div id="carouselTeam" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-team-inner" role="listbox">
+                                <?php foreach($get_personal as $i => $person ) {?>
+                                <div class="carousel-item <?php echo ($i == 0 ? 'active': '');?>">
+                                    <?php $class_is_grid_variant = ($grid_variant == true) ? 'd-block d-md-none' : '';?>
+                                    <center>
+                                        <div class="row">
+                                            <div class="col-md-3 col-1"></div>
+                                            <div class="mb-4 col-md-6 col-10">
+                                                <div class="body-container animate shadow-team-card h-100" style="border-radius: 15px;"> 
+                                                    <img style="border-top-left-radius: 15px;border-top-right-radius: 15px;" src="<?php echo base_url();?>asset/img_nicepage/team/<?php echo $person['photo'];?>" alt="<?php echo $person['nama'];?>">                                            
+                                                    <h4 class="body-title center">
+                                                        <?php echo $person['nama'];?>
+                                                    </h4>
+                                                    <div class="body-content center">
+                                                        <div class="team-title">
+                                                            <?php echo $person['jabatan'];?>
+                                                        </div>
+                                                        <div class="team-socmed">
+                                                            <a target="_blank" href="<?php echo $person['socmed_fb'];?>">
+                                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                            </a>
+                                                            <a target="_blank" href="<?php echo $person['socmed_twitter'];?>">
+                                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                            </a>
+                                                            
+                                                            <a target="_blank" href="<?php echo $person['socmed_ig'];?>">
+                                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                            </a>
+                                                            
+                                                            <a target="_blank" href="<?php echo $person['socmed_linkedin'];?>">
+                                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>                             
+                                                </div>
+                                            </div>  
+                                            <div class="col-md-3 col-1"></div>
+                                        </div>
+                                    </center>
+                                </div>                  
+                                <?php }?>
+                            </div>
+                            <ol class="carousel-indicators" style="bottom:-10%;">
+                                <?php for($t = 0 ; $t < count($get_personal);$t++) {?>
+                                    <li data-target="#carouselTeam"  data-slide-to="<?php echo $t;?>" <?php echo ($t == 0) ? ' class="active"':'';?> style="background-color: #28a745!important;"></li> 
+                                <?php } ?>
+                            </ol> 
                         </div>
-                    </div>                    
-                    <?php }?>
+                    </div>  
+                </div>
+                <br>
+                <br>
+                <div class="row justify-content-center">
                     <div class="col-12 mt-4 text-center">
                         <a href="<?php echo base_url('teams');?>" class="read-more">                                    
                             <?php echo (empty(trim($section_team['label_link'])) ? 'Selengkapnya' : $section_team['label_link']);?>
                         </a> 
-                    </div>   
-                <?php }?>
-            </div>
+                    </div> 
+                </div>
+            <?php }?>
         </div>
     </div>
 </div> 

@@ -165,3 +165,26 @@ ol.commentlist li .comment-answer{
 .comment-photo .user{
     border: 1px solid #212529;
 }
+
+/* custom css start */
+
+#carouselFeature .carousel-feature-inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+#carouselTeam .carousel-team-inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.shadow-team-card {
+    -webkit-box-shadow: 0px 0px 4px 0px #00000059;
+    box-shadow: 0px 0px 4px 0px #00000059;
+}
+
+/* custom css end */
