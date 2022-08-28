@@ -100,10 +100,6 @@ body.responsive-menu-hide > .responsive-menu {
     display: none!important;
 }
 
-.show-element-inline {
-    display: inline-block!important;
-}
-
 /* responsive devices start */
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
@@ -149,6 +145,10 @@ body.responsive-menu-hide > .responsive-menu {
     }
     .section #carouselTestimonial ol.carousel-indicators li {
         height: 6px;
+    }
+
+    .show-element-inline {
+        display: inline-block!important;
     }
   }
    
