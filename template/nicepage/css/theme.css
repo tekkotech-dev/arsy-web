@@ -1751,15 +1751,18 @@ ul.accordion li .answer {
 }
 
 .section #carouselTestimonial .carousel-item .photo-testimoni {
-  width: 120px;
-  margin: auto;
+  /* width: 120px;
+  margin: auto; */
+  text-align: center;
 }
 
 .section #carouselTestimonial .carousel-item .photo-testimoni img {    
   width: 100%;
-  border-radius: 50%;
+  border-radius: 10%;
   padding: 5px;
   border: 1px solid #dfe5e8;
+  height: 472px;
+  width: 354px;
 }
 
 .section #carouselTestimonial .carousel-item .carousel-caption {
