@@ -124,9 +124,9 @@ if(!empty($get_halaman_id)) {
                                         <?php $class_is_grid_variant = ($grid_variant == true) ? 'd-block d-md-none' : '';?>
                                         <center>
                                             <div class="row">
-                                                <div class="col-md-3"></div>
-                                                <div class="mb-4 col-md-6 col-12">
-                                                    <div class="body-container animate shadow" style="border-radius: 15px;"> 
+                                                <div class="col-md-3 col-1"></div>
+                                                <div class="mb-4 col-md-6 col-10">
+                                                    <div class="body-container animate shadow-team-card" style="border-radius: 15px;"> 
                                                         <img style="border-top-left-radius: 15px;border-top-right-radius: 15px;" src="<?php echo base_url();?>asset/foto_statis/<?php echo $hal['gambar'];?>" alt="<?php echo $hal['judul'];?>">    
                                                         <a href="<?php echo base_url('halaman/detail/'.$hal['judul_seo']);?>" >                                        
                                                             <h4 class="body-title center">
@@ -139,7 +139,7 @@ if(!empty($get_halaman_id)) {
                                                         </div>                     
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3"></div>
+                                                <div class="col-md-3 col-1"></div>
                                             </div>
                                         </center>
                                     </div>

@@ -65,7 +65,7 @@ function build_nav_menu($menu_parent_id = 0 ,$state_menu_id, $class_menu ='menu-
 				$base_url = $menu_item['link'];
 			}
 			// create link			
-			$a_link_menu = '<a '. $ahref_ttr .' href="'. $base_url .'">';
+			$a_link_menu = '<a style="width: 100%;" class="parent-menu-'.$menu_item['id_menu'].'" '. $ahref_ttr .' href="'. $base_url .'">';
 			$a_link_menu .= $menu_item['nama_menu'];
 			$a_link_menu .= '</a>';
 			// end

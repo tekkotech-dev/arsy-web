@@ -17,8 +17,9 @@ if(!empty($section_testimonial['jumlah'])) {
                     t.photo as photo
                 FROM 
                     tbl_nicepage_testimoni t
-                ORDER BY nama ASC LIMIT 0,".$section_testimonial['jumlah']
+                ORDER BY nama ASC"
                 )->result_array(); 
+
 } 
 ?>
 
