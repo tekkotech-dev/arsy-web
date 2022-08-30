@@ -34,7 +34,7 @@ if(!empty($section_berita['jumlah'])) {
                 "ORDER BY tanggal DESC LIMIT 0,".$section_berita['jumlah'])->result_array(); 
 }
 ?>
-<!--
+
 <div class="container">
     <div class="card py-4">
         <?php if( !empty($section_berita['judul'])) { ?>
@@ -118,4 +118,4 @@ if(!empty($section_berita['jumlah'])) {
         </div>
     </div>
 </div>
-                            -->
+                            
