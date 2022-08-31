@@ -1,3 +1,4 @@
+<!--
 <?php if ($total_komentar > 0 ){ ?>
 <div class="card my-4 shadow" id="listcomment"> 
 	<div class="card-body">
@@ -168,3 +169,4 @@
 		</div>	 
 	<?php echo form_close();?>
 </div>
+			-->
