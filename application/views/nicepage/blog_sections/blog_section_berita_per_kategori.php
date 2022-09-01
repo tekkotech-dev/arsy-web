@@ -51,7 +51,7 @@
 									}  
 								?>
 									<li>
-											<div class="post-img-container"
+											<div class="post-img-container border-radius-img-news"
 												style="
 													background:url('<?php echo $img_src;?>');
 													background-position:center;

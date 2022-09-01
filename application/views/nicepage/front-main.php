@@ -1,5 +1,7 @@
 <div class="container mt-md-120 mt-120">
 		<div class="row">
+            <div class="col-lg-2">
+            </div>
             <div class="col-lg-8">
                
                     <?php
@@ -42,8 +44,10 @@
                 ?> 
                 <?php echo $contents; ?> 
             </div>
-            <div class="col-lg-4"> 
-                <?php include "partials/sidebar.php"; ?>
+            <div class="col-lg-2">
             </div>
+            <!-- <div class="col-lg-4"> 
+                <?php include "partials/sidebar.php"; ?>
+            </div> -->
     </div>
 </div>

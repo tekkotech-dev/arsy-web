@@ -1,7 +1,7 @@
 <div class="post-head mb-4"> 
 Semua daftar / List File Download
 </div>  
-<div class="blog-detail card shadow mb-4">
+<div class="blog-detail card shadow mb-4" style="border-radius: 15px;">
 	<div class="card-body">
 		<table class="table table-bordered table-hover table-striped">
 			<thead>

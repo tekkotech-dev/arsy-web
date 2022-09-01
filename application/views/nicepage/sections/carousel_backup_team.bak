@@ -1,0 +1,49 @@
+                        <div id="carouselTeam" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-team-inner" role="listbox">
+                                <?php foreach($get_personal as $i => $person ) {?>
+                                <div class="carousel-item <?php echo ($i == 0 ? 'active': '');?>">
+                                    <?php $class_is_grid_variant = ($grid_variant == true) ? 'd-block d-md-none' : '';?>
+                                    <center>
+                                        <div class="row">
+                                            <div class="col-md-3 col-1"></div>
+                                            <div class="mb-4 col-md-6 col-10">
+                                                <div class="body-container animate shadow-team-card h-100" style="border-radius: 15px;"> 
+                                                    <img style="border-top-left-radius: 15px;border-top-right-radius: 15px;" src="<?php echo base_url();?>asset/img_nicepage/team/<?php echo $person['photo'];?>" alt="<?php echo $person['nama'];?>">                                            
+                                                    <h4 class="body-title center">
+                                                        <?php echo $person['nama'];?>
+                                                    </h4>
+                                                    <div class="body-content center">
+                                                        <div class="team-title">
+                                                            <?php echo $person['jabatan'];?>
+                                                        </div>
+                                                        <div class="team-socmed">
+                                                            <a target="_blank" href="<?php echo $person['socmed_fb'];?>">
+                                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                            </a>
+                                                            <a target="_blank" href="<?php echo $person['socmed_twitter'];?>">
+                                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                            </a>
+                                                            
+                                                            <a target="_blank" href="<?php echo $person['socmed_ig'];?>">
+                                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                            </a>
+                                                            
+                                                            <a target="_blank" href="<?php echo $person['socmed_linkedin'];?>">
+                                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>                             
+                                                </div>
+                                            </div>  
+                                            <div class="col-md-3 col-1"></div>
+                                        </div>
+                                    </center>
+                                </div>                  
+                                <?php }?>
+                            </div>
+                            <ol class="carousel-indicators" style="bottom:-10%;">
+                                <?php for($t = 0 ; $t < count($get_personal);$t++) {?>
+                                    <li data-target="#carouselTeam"  data-slide-to="<?php echo $t;?>" <?php echo ($t == 0) ? ' class="active"':'';?> style="background-color: #28a745!important;"></li> 
+                                <?php } ?>
+                            </ol> 
+                        </div>

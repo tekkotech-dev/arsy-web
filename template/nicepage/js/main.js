@@ -198,22 +198,32 @@ $('#responsive-menu').on('click', '.parent-menu-189', function(e){
     $('.menu-189-minus').toggleClass('hide-element')
 })
 
-$('#responsive-menu').on('click', '#menu-item-201', function(e){
+$('#responsive-menu').on('click', '.parent-menu-221', function(e){
     e.preventDefault()
-    $('.sub-menu-mobile-201').toggleClass('show-element')
-    console.log('lv 2')
+    $('.sub-menu-mobile-221').toggleClass('show-element')
+    $('.menu-221-plus').toggleClass('show-element-inline')
+    $('.menu-221-minus').toggleClass('hide-element')
 })
 
-$('#responsive-menu').on('click', '#menu-item-202', function(e){
+$('#responsive-menu').on('click', '.parent-menu-222', function(e){
     e.preventDefault()
-    $('.sub-menu-mobile-202').toggleClass('show-element')
-    console.log('lv 2')
+    $('.sub-menu-mobile-222').toggleClass('show-element')
+    $('.menu-222-plus').toggleClass('show-element-inline')
+    $('.menu-222-minus').toggleClass('hide-element')
 })
 
-$('#responsive-menu').on('click', '#menu-item-203', function(e){
+$('#responsive-menu').on('click', '.parent-menu-188', function(e){
     e.preventDefault()
-    $('.sub-menu-mobile-202').toggleClass('show-element')
-    console.log('lv 2')
+    $('.sub-menu-mobile-188').toggleClass('show-element')
+    $('.menu-188-plus').toggleClass('show-element-inline')
+    $('.menu-188-minus').toggleClass('hide-element')
+})
+
+$('#responsive-menu').on('click', '.parent-menu-149', function(e){
+    e.preventDefault()
+    $('.sub-menu-mobile-149').toggleClass('show-element')
+    $('.menu-149-plus').toggleClass('show-element-inline')
+    $('.menu-149-minus').toggleClass('hide-element')
 })
 
 if ($("#responsive-menu").length) {
@@ -221,6 +231,76 @@ if ($("#responsive-menu").length) {
 
     $('.parent-menu-189').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-189-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-189-minus hide-element" aria-hidden="true"></i>')
 
+    $('.parent-menu-221').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-221-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-221-minus hide-element" aria-hidden="true"></i>')
+
+    $('.parent-menu-222').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-222-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-222-minus hide-element" aria-hidden="true"></i>')
+
+    $('.parent-menu-188').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-188-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-188-minus hide-element" aria-hidden="true"></i>')
+
+    $('.parent-menu-149').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-149-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-149-minus hide-element" aria-hidden="true"></i>')
 }
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '#slide-layanan', {
+        perPage:2,
+        gap    : '50px',
+        // height : '200px',
+        autoplay: true,
+        type     : 'loop',
+        breakpoints: {
+            1200: {
+                perPage:2,
+                gap    : '50px',
+                autoplay: true,
+                type     : 'loop',
+            },
+            640: {
+                perPage: 1,
+                gap    : '.7rem',
+                autoplay: true,
+                type     : 'loop',
+            },
+            480: {
+                perPage: 1,
+                gap    : '.7rem',
+                autoplay: true,
+                type     : 'loop',
+            },
+        },
+    });
+
+    var splideDireksi = new Splide( '#slide-direksi', {
+        perPage:3,
+        gap    : '50px',
+        // height : '900px',
+        autoplay: true,
+        type     : 'loop',
+        // fixedHeight: '130%',
+        breakpoints: {
+            1200: {
+                perPage:3,
+                gap    : '50px',
+                autoplay: true,
+                type     : 'loop',
+            },
+            640: {
+                perPage: 1,
+                gap    : '.7rem',
+                autoplay: true,
+                type     : 'loop',
+            },
+            480: {
+                perPage: 1,
+                gap    : '.7rem',
+                autoplay: true,
+                type     : 'loop',
+            },
+        },
+    });
+  
+    splide.mount();
+    splideDireksi.mount();
+
+});
 
 

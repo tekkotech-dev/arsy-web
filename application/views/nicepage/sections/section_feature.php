@@ -76,81 +76,35 @@ if(!empty($get_halaman_id)) {
                         }
                     ?>
                     <div class="mb-4 mt-4 col-lg-12">
-                        <!-- carousel section feature -->
-                        <div id="carouselFeature" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-feature-inner" role="listbox">
-                            <?php foreach($get_halaman as $i => $hal) {?>
-                                <?php //ditampilkan saat layar lebar (layout grid variant)?>
-                                <?php if($grid_variant == true) { ?>
-                                    <div class="d-none d-md-block"> 
-                                        <div class="m-0 body-container shadow"> 
-                                            <div class="grid-variant">
-                                                <div class="column">
-                                                    <?php if($i % 2 == 0) { ?>
-                                                        <img src="<?php echo base_url();?>asset/foto_statis/<?php echo $hal['gambar'];?>" alt="<?php echo $hal['judul'];?>">
-                                                    <?php } else { ?>
-                                                        <a href="<?php echo base_url('halaman/detail/'.$hal['judul_seo']);?>" >                                        
-                                                            <h3 class="body-title center">
-                                                                <?php echo $hal['judul'];?>
-                                                            </h3>
-                                                        </a> 
-                                                        <div class="body-content center">
-                                                            <?php $limit_word =  (empty(trim($section_feature['max_kata'])) ? 15 : (int) $section_feature['max_kata']);?>
-                                                            <?php echo word_limiter($hal['isi'],$limit_word);?>   
-                                                        </div>   
-                                                    <?php } ?>
+                        <!-- carousel -->
+                        <section id="slide-layanan" class="splide" aria-labelledby="carousel-heading">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <!-- <li class="splide__slide">Slide 01</li>
+                                    <li class="splide__slide">Slide 02</li>
+                                    <li class="splide__slide">Slide 03</li> -->
+                                    <!-- <div class="row"> -->
+                                        <?php foreach($get_halaman as $i => $hal) {?>
+                                            <li class="splide__slide">
+                                                <div class="body-container animate shadow-team-card" style="border-radius: 15px;"> 
+                                                    <img style="border-top-left-radius: 15px;border-top-right-radius: 15px;" src="<?php echo base_url();?>asset/foto_statis/<?php echo $hal['gambar'];?>" alt="<?php echo $hal['judul'];?>">    
+                                                    <a href="<?php echo base_url('halaman/detail/'.$hal['judul_seo']);?>" >                                        
+                                                        <h4 class="body-title center">
+                                                            <?php echo $hal['judul'];?>
+                                                        </h4>
+                                                    </a>
+                                                    <div class="body-content center"> 
+                                                        <?php $limit_word =  (empty(trim($section_feature['max_kata'])) ? 15 : (int) $section_feature['max_kata']);?>
+                                                        <?php echo word_limiter($hal['isi'],$limit_word);?>  
+                                                    </div>                     
                                                 </div>
-                                                
-                                                <div class="column">
-                                                    <?php if($i % 2 == 0) { ?>
-                                                        <a href="<?php echo base_url('halaman/detail/'.$hal['judul_seo']);?>" >                                        
-                                                            <h3 class="body-title center">
-                                                                <?php echo $hal['judul'];?>
-                                                            </h3>
-                                                        </a> 
-                                                        <div class="body-content center">
-                                                            <?php $limit_word =  (empty(trim($section_feature['max_kata'])) ? 15 : (int) $section_feature['max_kata']);?>
-                                                            <?php echo word_limiter($hal['isi'],$limit_word);?> 
-                                                        </div>   
-                                                    <?php } else { ?>
-                                                        <img src="<?php echo base_url();?>asset/foto_statis/<?php echo $hal['gambar'];?>" alt="<?php echo $hal['judul'];?>"> 
-                                                    <?php } ?>      
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                                    <div class="carousel-item <?php echo ($i == 0 ? 'active': '');?>">
-                                        <?php $class_is_grid_variant = ($grid_variant == true) ? 'd-block d-md-none' : '';?>
-                                        <center>
-                                            <div class="row">
-                                                <div class="col-md-3 col-1"></div>
-                                                <div class="mb-4 col-md-6 col-10">
-                                                    <div class="body-container animate shadow-team-card" style="border-radius: 15px;"> 
-                                                        <img style="border-top-left-radius: 15px;border-top-right-radius: 15px;" src="<?php echo base_url();?>asset/foto_statis/<?php echo $hal['gambar'];?>" alt="<?php echo $hal['judul'];?>">    
-                                                        <a href="<?php echo base_url('halaman/detail/'.$hal['judul_seo']);?>" >                                        
-                                                            <h4 class="body-title center">
-                                                                <?php echo $hal['judul'];?>
-                                                            </h4>
-                                                        </a>
-                                                        <div class="body-content center"> 
-                                                            <?php $limit_word =  (empty(trim($section_feature['max_kata'])) ? 15 : (int) $section_feature['max_kata']);?>
-                                                            <?php echo word_limiter($hal['isi'],$limit_word);?>  
-                                                        </div>                     
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3 col-1"></div>
-                                            </div>
-                                        </center>
-                                    </div>
-                            <?php }?>
+                                            </li>
+                                        <?php }?>
+                                    <!-- </div> -->
+                                </ul>
                             </div>
-                            <ol class="carousel-indicators" style="bottom:-10%;">
-                                <?php for($t = 0 ; $t < count($get_halaman);$t++) {?>
-                                    <li data-target="#carouselFeature"  data-slide-to="<?php echo $t;?>" <?php echo ($t == 0) ? ' class="active"':'';?> style="background-color: #28a745!important;"></li> 
-                                <?php } ?>
-                            </ol>                            
-                        </div> 
+                        </section>
+
                     </div>
                     <?php if(!empty(trim($section_feature['url_link'])) ){ ?>
                         <div class="col-12 mt-4 text-center">
@@ -159,7 +113,6 @@ if(!empty($get_halaman_id)) {
                             </a> 
                         </div>
                     <?php } ?>
-                        
                 <?php }?>
             </div>
         </div>

@@ -6,10 +6,10 @@
 <div class="post-head mb-4"> 
 	<?php echo $rows['judul'] ."<small>$rows[sub_judul] </small>"; ?>
 </div>  
-	<div class="blog-detail card shadow mb-4"> 
+	<div class="blog-detail card shadow mb-4" style="border-radius: 15px;"> 
 		<?php 
 			if ($rows['gambar'] !=''){ 
-				echo "<img style='width:100%' src='".base_url()."asset/foto_berita/$rows[gambar]' alt='$rows[judul]' /></a><br><br>"; 
+				echo "<img class='border-radius-img-news' style='width:100%' src='".base_url()."asset/foto_berita/$rows[gambar]' alt='$rows[judul]' /></a><br><br>"; 
 			
 				if ($rows['keterangan_gambar'] !=''){ 
 					echo "<center><p><i><b>Keterangan Gambar :</b> $rows[keterangan_gambar]</i></p></center><br>"; 
@@ -102,7 +102,7 @@
 		$hasil  = $this->db->query($cari);
 		if ($hasil->num_rows()>=1) {
 	?>
-	<div class="related-blog card mb-4 shadow">
+	<div class="related-blog card mb-4 shadow" style="border-radius: 15px;">
 		<h5 class="card-header">
 			Baca Lainnya
 		</h5>

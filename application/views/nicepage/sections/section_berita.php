@@ -65,14 +65,14 @@ if(!empty($section_berita['jumlah'])) {
                     ?>
                     <?php foreach($get_berita as $berita) {?>
                     <div class="mb-4 col-md-6 col-lg-<?php echo $layout;?>">
-                        <div class="body-container animate shadow h-100"> 
+                        <div class="body-container animate shadow h-100" style="border-radius: 15px;"> 
                             <?php
                             $img_src= base_url().'asset/foto_berita/small_no-image.jpg';
                             if ($berita['gambar'] !==''){
                                 $img_src =base_url().'asset/foto_berita/'.$berita['gambar'];
                             } 
                             ?>
-                            <div class="post-img-container"
+                            <div class="post-img-container border-radius-img-news"
                                 style="background:url('<?php echo $img_src;?>');
                                         background-position:center;
                                         background-size:cover;

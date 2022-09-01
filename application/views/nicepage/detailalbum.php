@@ -6,7 +6,7 @@ $base_path = FCPATH;
 </div> 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="blog-detail card shadow mb-4">
+		<div class="blog-detail card shadow mb-4" style="border-radius: 15px;">
 			<div class="card-body">
 				<div class="card-text">
 					<?php echo "$rows[keterangan]"; ?>

@@ -39,6 +39,8 @@ if( isset($tagline['text'])) {
 
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/<?php echo template(); ?>/css/main.css" />	
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/<?php echo template(); ?>/css/themes/<?php echo background(); ?>.css" />	
+	<!-- Link to the file hosted on your server, -->
+	<link rel="stylesheet" href="<?php echo base_url(); ?>template/<?php echo template(); ?>/vendor/splide-4.0.7/dist/css/splide.min.css">
       
 	<?php include "partials/head.php"; ?>
 </head>
@@ -97,6 +99,7 @@ if( isset($btn_to_top['value'])) {
 <script type="text/javascript" src="<?php echo base_url(); ?>template/<?php echo template(); ?>/vendor/jquery.easing/jquery.easing.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>template/<?php echo template(); ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>template/<?php echo template(); ?>/js/main.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>template/<?php echo template(); ?>/vendor/splide-4.0.7/dist/js/splide.min.js"></script>
 
 <?php include "partials/foot.php"; ?>
 </body>

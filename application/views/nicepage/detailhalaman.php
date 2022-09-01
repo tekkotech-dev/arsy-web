@@ -3,7 +3,7 @@
 ?>
 <div class="post-head mb-4"> 
 	<?php echo $rows['judul']; ?> 
-</div>  
+</div>
 <div class="blog card shadow detail mb-4">
 	<?php
 		if (!empty($rows['gambar']) &&  file_exists( $base_path ."asset/foto_statis/".($rows['gambar']) ) ){
@@ -11,7 +11,7 @@
 			?>	 
 				<img src="<?php echo $img_src;?>" alt="<?php echo  $rows['gambar'];?>" class="card-img-top"> 
 			<?php
-	  	}
+			}
 		?> 
 	<div class="card-body"> 
 		<div class="card-text">
@@ -22,7 +22,7 @@
 	<div class="card-footer">  
 		<?php include 'partials/share.php';?>
 	</div>
-</div>
+</div>  
 	<?php
 	$iiklan = $this->model_utama->view_where_ordering_limit('iklantengah',array('posisi'=>'hal_statis'),'id_iklantengah','ASC',0,5);
 	foreach ($iiklan->result_array() as $ia) {

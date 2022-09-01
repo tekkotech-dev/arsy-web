@@ -113,6 +113,13 @@ body.responsive-menu-hide > .responsive-menu {
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
     }
+    .border-radius-img-news {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .height-card-direksi {
+        height: 96%!important;
+    }
   }
    
   /* For Tablet View */
@@ -127,6 +134,13 @@ body.responsive-menu-hide > .responsive-menu {
     .border-radius-img {
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
+    }
+    .border-radius-img-news {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .height-card-direksi {
+        height: 95%!important;
     }
   }
    
@@ -143,12 +157,19 @@ body.responsive-menu-hide > .responsive-menu {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
+    .border-radius-img-news {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
     .section #carouselTestimonial ol.carousel-indicators li {
         height: 6px;
     }
 
     .show-element-inline {
         display: inline-block!important;
+    }
+    .height-card-direksi {
+        height: 95%!important;
     }
   }
    
@@ -174,4 +195,12 @@ body.responsive-menu-hide > .responsive-menu {
     }
   } */
 /* responsive devices end */
+
+.splide__arrows {
+    display: none;
+}
+
+.splide__pagination__page.is-active {
+    background: #28a745!important;
+}
  
