@@ -1,7 +1,7 @@
 <div class="post-head mb-4"> 
 	Hubungi Kami
 </div>  
-<div class="blog card shadow detail mb-4">
+<div class="blog card shadow detail mb-4" style="border-radius:15px;">
 	<div class="card-body">  
 		<div class="google-maps">
 			<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo "$iden[maps]"; ?>"></iframe>

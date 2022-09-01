@@ -4,12 +4,12 @@
 <div class="post-head mb-4"> 
 	<?php echo $rows['judul']; ?> 
 </div>
-<div class="blog card shadow detail mb-4">
+<div class="blog card shadow detail mb-4" style="border-radius:15px;">
 	<?php
 		if (!empty($rows['gambar']) &&  file_exists( $base_path ."asset/foto_statis/".($rows['gambar']) ) ){
 			$img_src = base_url()."asset/foto_statis/". $rows['gambar'];
 			?>	 
-				<img src="<?php echo $img_src;?>" alt="<?php echo  $rows['gambar'];?>" class="card-img-top"> 
+				<img class="border-radius-img-news" src="<?php echo $img_src;?>" alt="<?php echo  $rows['gambar'];?>" class="card-img-top"> 
 			<?php
 			}
 		?> 

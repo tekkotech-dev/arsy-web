@@ -84,7 +84,7 @@ $this->session->set_userdata('captcha_contact', $security_code['word']);
                                     </div>
                                     
                                     <div class="form-group text-center">
-                                        <button name="kirim" class="btn btn-theme px-5 py-2" type="submit" >
+                                        <button name="kirim" class="btn btn-theme px-5 py-2" type="submit" style="border-radius:10px;">
                                             Kirim
                                         </button>
                                     </div>

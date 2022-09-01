@@ -1,7 +1,7 @@
 <div class="post-head mb-4"> 
 Total Hasil Persentasi / Perhitungan Poling
 </div>
-<div class="blog card shadow detail mb-4">
+<div class="blog card shadow detail mb-4" style="border-radius:15px;">
 	<div class="card-body">
 		<?php
 		if (get_cookie('poling')!='') {
