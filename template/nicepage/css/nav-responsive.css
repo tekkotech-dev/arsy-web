@@ -74,7 +74,7 @@ body.responsive-menu-hide > .responsive-menu {
 
 .responsive-menu .menu-content ul.sidemenu ul.sub-menu li ,
 .responsive-menu .menu-content ul.sidemenu li {
-    padding-left: 15px;
+    padding-left: 13px;
 }
  
 .responsive-menu .menu-content ul.sidemenu ul.sub-menu li a,
@@ -120,6 +120,9 @@ body.responsive-menu-hide > .responsive-menu {
     .height-card-direksi {
         height: 96%!important;
     }
+    .height-card-berita {
+        height: 94%!important;
+    }
   }
    
   /* For Tablet View */
@@ -140,6 +143,9 @@ body.responsive-menu-hide > .responsive-menu {
         border-top-right-radius: 15px;
     }
     .height-card-direksi {
+        height: 95%!important;
+    }
+    .height-card-berita {
         height: 95%!important;
     }
   }
@@ -169,6 +175,9 @@ body.responsive-menu-hide > .responsive-menu {
         display: inline-block!important;
     }
     .height-card-direksi {
+        height: 95%!important;
+    }
+    .height-card-berita {
         height: 95%!important;
     }
   }

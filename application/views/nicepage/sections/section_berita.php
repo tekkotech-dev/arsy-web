@@ -63,45 +63,57 @@ if(!empty($section_berita['jumlah'])) {
                                 break;
                         }
                     ?>
-                    <?php foreach($get_berita as $berita) {?>
-                    <div class="mb-4 col-md-6 col-lg-<?php echo $layout;?>">
-                        <div class="body-container animate shadow h-100" style="border-radius: 15px;"> 
-                            <?php
-                            $img_src= base_url().'asset/foto_berita/small_no-image.jpg';
-                            if ($berita['gambar'] !==''){
-                                $img_src =base_url().'asset/foto_berita/'.$berita['gambar'];
-                            } 
-                            ?>
-                            <div class="post-img-container border-radius-img-news"
-                                style="background:url('<?php echo $img_src;?>');
-                                        background-position:center;
-                                        background-size:cover;
-                                        background-repeat:no-repeat;
-                                        height:250px;"></div> 
-                            <a href="<?php echo base_url($berita['judul_seo']);?>">                                          
-                                <h5 class="body-title center">
-                                    <?php echo $berita['judul'];?>
-                                </h5>
-                            </a>
-                            <div class="body-post-meta">   
-                                <i class="fa fa-calendar"></i> <?php echo tgl_indo($berita['tanggal']); ?> ,
-                                <i class="fa fa-user"></i> <?php echo $berita['nama_lengkap']; ?>,
-                                <a href="<?php echo base_url()."kategori/detail/".$berita['kategori_seo']; ?>">
-                                    <b><?php echo $berita['nama_kategori']; ?></b>
-                                </a>
-                                
-			                </div> 
-							<div class="body-post-content">
-								<?php echo strip_tags(word_limiter($berita['isi_berita'],10) );?> 
-							</div>
-                            <div class="body-action">
-                            <a href="<?php echo base_url($berita['judul_seo']);?>" class="read-more">
-                                Selengkapnya
-                            </a>
+
+                    
+                            
+
+                    <div class="mb-4 col-md-12">
+                        <section id="slide-berita" class="splide" aria-labelledby="carousel-heading">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <?php foreach($get_berita as $berita) {?>
+                                        <li class="splide__slide">
+                                            <div class="body-container animate shadow height-card-berita" style="border-radius: 15px;"> 
+                                                <?php
+                                                $img_src= base_url().'asset/foto_berita/small_no-image.jpg';
+                                                if ($berita['gambar'] !==''){
+                                                    $img_src =base_url().'asset/foto_berita/'.$berita['gambar'];
+                                                } 
+                                                ?>
+                                                <div class="post-img-container border-radius-img-news"
+                                                    style="background:url('<?php echo $img_src;?>');
+                                                            background-position:center;
+                                                            background-size:cover;
+                                                            background-repeat:no-repeat;
+                                                            height:250px;"></div> 
+                                                <a href="<?php echo base_url($berita['judul_seo']);?>">                                          
+                                                    <h5 class="body-title center">
+                                                        <?php echo $berita['judul'];?>
+                                                    </h5>
+                                                </a>
+                                                <div class="body-post-meta">   
+                                                    <i class="fa fa-calendar"></i> <?php echo tgl_indo($berita['tanggal']); ?> ,
+                                                    <i class="fa fa-user"></i> <?php echo $berita['nama_lengkap']; ?>,
+                                                    <a href="<?php echo base_url()."kategori/detail/".$berita['kategori_seo']; ?>">
+                                                        <b><?php echo $berita['nama_kategori']; ?></b>
+                                                    </a>
+                                                    
+                                                </div> 
+                                                <div class="body-post-content">
+                                                    <?php echo strip_tags(word_limiter($berita['isi_berita'],10) );?> 
+                                                </div>
+                                                <div class="body-action">
+                                                <a href="<?php echo base_url($berita['judul_seo']);?>" class="read-more">
+                                                    Selengkapnya
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    <?php }?>
+                                </ul>
                             </div>
-                        </div>
+                        </section>
                     </div>                    
-                    <?php }?>
                         <div class="col-12 mt-4 text-center">
                             <?php
                                 $url_berita = base_url()."kategori/detail/".$berita['kategori_seo'];

@@ -226,6 +226,27 @@ $('#responsive-menu').on('click', '.parent-menu-149', function(e){
     $('.menu-149-minus').toggleClass('hide-element')
 })
 
+$('#responsive-menu').on('click', '.parent-menu-201', function(e){
+    e.preventDefault()
+    $('.sub-menu-mobile-201').toggleClass('show-element')
+    $('.menu-201-plus').toggleClass('show-element-inline')
+    $('.menu-201-minus').toggleClass('hide-element')
+})
+
+$('#responsive-menu').on('click', '.parent-menu-202', function(e){
+    e.preventDefault()
+    $('.sub-menu-mobile-202').toggleClass('show-element')
+    $('.menu-202-plus').toggleClass('show-element-inline')
+    $('.menu-202-minus').toggleClass('hide-element')
+})
+
+$('#responsive-menu').on('click', '.parent-menu-203', function(e){
+    e.preventDefault()
+    $('.sub-menu-mobile-203').toggleClass('show-element')
+    $('.menu-203-plus').toggleClass('show-element-inline')
+    $('.menu-203-minus').toggleClass('hide-element')
+})
+
 if ($("#responsive-menu").length) {
     $('.parent-menu-194').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-194-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-194-minus hide-element" aria-hidden="true"></i>')
 
@@ -238,6 +259,12 @@ if ($("#responsive-menu").length) {
     $('.parent-menu-188').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-188-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-188-minus hide-element" aria-hidden="true"></i>')
 
     $('.parent-menu-149').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-149-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-149-minus hide-element" aria-hidden="true"></i>')
+
+    $('.parent-menu-201').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-201-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-201-minus hide-element" aria-hidden="true"></i>')
+
+    $('.parent-menu-202').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-202-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-202-minus hide-element" aria-hidden="true"></i>')
+
+    $('.parent-menu-203').append('<i style="float: right;margin-top: 3%;display:none;" class="fa fa-plus menu-203-plus show-element-inline" aria-hidden="true"></i><i style="float: right;margin-top: 3%;display:inline-block;" class="fa fa-minus menu-203-minus hide-element" aria-hidden="true"></i>')
 }
 
 document.addEventListener( 'DOMContentLoaded', function() {
@@ -297,9 +324,39 @@ document.addEventListener( 'DOMContentLoaded', function() {
             },
         },
     });
+
+    var splideBerita = new Splide( '#slide-berita', {
+        perPage:3,
+        gap    : '50px',
+        // height : '900px',
+        autoplay: true,
+        type     : 'loop',
+        // fixedHeight: '130%',
+        breakpoints: {
+            1200: {
+                perPage:3,
+                gap    : '50px',
+                autoplay: true,
+                type     : 'loop',
+            },
+            640: {
+                perPage: 1,
+                gap    : '.7rem',
+                autoplay: true,
+                type     : 'loop',
+            },
+            480: {
+                perPage: 1,
+                gap    : '.7rem',
+                autoplay: true,
+                type     : 'loop',
+            },
+        },
+    });
   
     splide.mount();
     splideDireksi.mount();
+    splideBerita.mount();
 
 });
 
