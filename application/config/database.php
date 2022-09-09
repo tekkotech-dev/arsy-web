@@ -73,12 +73,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+$env = 'prod';
+
+if ($env == 'prod') {
+	$username = 'rsarsyco_admin';
+	$database = 'rsarsyco_web_profile';
+	$password = 'Paciranlamongan2022';
+} else if($env == 'local') {
+	$username = 'root';
+	$database = 'blackexpo_company';
+	$password = '';
+}
+
+
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'blackexpo_company',
+	'username' => $username,
+	'password' => $password,
+	'database' => $database,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
