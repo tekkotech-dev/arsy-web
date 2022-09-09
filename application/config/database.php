@@ -79,10 +79,12 @@ if ($env == 'prod') {
 	$username = 'rsarsyco_admin';
 	$database = 'rsarsyco_web_profile';
 	$password = 'Paciranlamongan2022';
+	$hostname = 'liberica';
 } else if($env == 'local') {
 	$username = 'root';
 	$database = 'blackexpo_company';
 	$password = '';
+	$hostname = 'localhost';
 }
 
 
