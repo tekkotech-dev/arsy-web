@@ -90,7 +90,7 @@ if ($env == 'prod') {
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => $hostname,
 	'username' => $username,
 	'password' => $password,
 	'database' => $database,
